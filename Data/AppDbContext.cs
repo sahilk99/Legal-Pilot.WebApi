@@ -1,11 +1,12 @@
 using Microsoft.EntityFrameworkCore;
 using Legal_Pilot.api.Models;
+using System;
 
 namespace Legal_Pilot.api.Data
 {
-    public class ApplicationDbContext : DbContext
+    public class AppDbContext : DbContext
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+        public AppDbContext(DbContextOptions<AppDbContext> options)
             : base(options)
         {
         }
@@ -16,22 +17,25 @@ namespace Legal_Pilot.api.Data
         public DbSet<AuditLog> AuditLogs { get; set; }
         public DbSet<Notification> Notifications { get; set; }
 
+        
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
-            // User relations
+            modelBuilder.Entity<User>()
+                .HasIndex(u => u.Email)
+                .IsUnique();
+
             modelBuilder.Entity<User>()
                 .HasOne(u => u.Department)
                 .WithMany(d => d.Users)
                 .HasForeignKey(u => u.DepartmentId)
                 .OnDelete(DeleteBehavior.SetNull);
 
-            // Document relations
             modelBuilder.Entity<Document>()
                 .HasOne(d => d.Uploader)
-                .WithMany(u => u.Documents)
-                .HasForeignKey(d => d.UploadedBy)
+                .WithMany() 
+                .HasForeignKey(d => d.UploadedById)
                 .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<Document>()
@@ -40,25 +44,30 @@ namespace Legal_Pilot.api.Data
                 .HasForeignKey(d => d.DepartmentId)
                 .OnDelete(DeleteBehavior.SetNull);
 
-            // AuditLog relations
             modelBuilder.Entity<AuditLog>()
                 .HasOne(a => a.User)
-                .WithMany(u => u.AuditLogs)
+                .WithMany()
                 .HasForeignKey(a => a.UserId)
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.Cascade);
 
-            // Notification relations
             modelBuilder.Entity<Notification>()
                 .HasOne(n => n.User)
-                .WithMany(u => u.Notifications)
+                .WithMany()
                 .HasForeignKey(n => n.UserId)
                 .OnDelete(DeleteBehavior.Cascade);
 
             modelBuilder.Entity<Notification>()
                 .HasOne(n => n.Document)
-                .WithMany(d => d.Notifications)
+                .WithMany()
                 .HasForeignKey(n => n.DocumentId)
                 .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<Department>().HasData(
+                new Department { Id = 1, Name = "HR", CreatedAt = DateTime.UtcNow },
+                new Department { Id = 2, Name = "Finance", CreatedAt = DateTime.UtcNow },
+                new Department { Id = 3, Name = "Operations", CreatedAt = DateTime.UtcNow }
+            );
+
         }
     }
 }

@@ -1,3 +1,5 @@
+using System;
+
 namespace Legal_Pilot.api.Models
 {
     public class AuditLog
@@ -8,9 +10,9 @@ namespace Legal_Pilot.api.Models
         public required string EntityType { get; set; }
         public int EntityId { get; set; }
         public string? Description { get; set; }
+        public bool IsDeleted { get; set; } = false;
         public DateTime Timestamp { get; set; } = DateTime.UtcNow;
 
-        // Navigation properties
         public User? User { get; set; }
     }
 }
