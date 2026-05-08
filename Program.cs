@@ -14,6 +14,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 builder.Services.AddScoped<IJwtService, JwtService>();
 builder.Services.AddScoped<IAuditService, AuditService>();
+builder.Services.AddScoped<IDocumentService, DocumentService>();
+builder.Services.AddHostedService<DocumentStatusService>();
 
 builder.Services.AddCors(options =>
 {
