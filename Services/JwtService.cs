@@ -2,12 +2,12 @@ using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using Legal_Pilot.api.Interfaces;
-using Legal_Pilot.api.Models;
+using Compliance_Hub.api.Interfaces;
+using Compliance_Hub.api.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 
-namespace Legal_Pilot.api.Services
+namespace Compliance_Hub.api.Services
 {
     public class JwtService : IJwtService
     {

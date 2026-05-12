@@ -1,6 +1,6 @@
 using System;
 
-namespace Legal_Pilot.api.DTOs
+namespace Compliance_Hub.api.DTOs
 {
     public class AuditLogResponseDTO
     {

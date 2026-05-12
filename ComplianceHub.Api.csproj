@@ -4,7 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <RootNamespace>Legal_Pilot.api</RootNamespace>
+    <RootNamespace>Compliance_Hub.api</RootNamespace>
     <UserSecretsId>0543ddd5-7145-4072-bd45-17a74eb43b5d</UserSecretsId>
   </PropertyGroup>
 

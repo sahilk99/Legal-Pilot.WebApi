@@ -1,14 +1,14 @@
 using System;
 using System.Threading.Tasks;
-using Legal_Pilot.api.Data;
-using Legal_Pilot.api.DTOs;
-using Legal_Pilot.api.Interfaces;
-using Legal_Pilot.api.Models;
+using Compliance_Hub.api.Data;
+using Compliance_Hub.api.DTOs;
+using Compliance_Hub.api.Interfaces;
+using Compliance_Hub.api.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
-namespace Legal_Pilot.api.Controllers
+namespace Compliance_Hub.api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Legal_Pilot.api.DTOs
+namespace Compliance_Hub.api.DTOs
 {
     public class DashboardSummaryDTO
     {

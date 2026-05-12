@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Legal_Pilot.api.Models
+namespace Compliance_Hub.api.Models
 {
     public class Department
     {

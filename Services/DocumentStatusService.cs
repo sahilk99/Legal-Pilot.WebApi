@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
-using Legal_Pilot.api.Data;
-using Legal_Pilot.api.Models;
+using Compliance_Hub.api.Data;
+using Compliance_Hub.api.Models;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Legal_Pilot.api.Services
+namespace Compliance_Hub.api.Services
 {
     public class DocumentStatusService : BackgroundService
     {

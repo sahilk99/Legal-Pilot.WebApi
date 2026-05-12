@@ -1,6 +1,6 @@
 using System;
 
-namespace Legal_Pilot.api.Models
+namespace Compliance_Hub.api.Models
 {
     public class AuditLog
     {

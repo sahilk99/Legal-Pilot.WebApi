@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
-using Legal_Pilot.api.Models;
+using Compliance_Hub.api.Models;
 using System;
 
-namespace Legal_Pilot.api.Data
+namespace Compliance_Hub.api.Data
 {
     public class AppDbContext : DbContext
     {

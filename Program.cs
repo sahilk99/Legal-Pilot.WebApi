@@ -1,11 +1,11 @@
-using Legal_Pilot.api.Data;
+using Compliance_Hub.api.Data;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
-using Legal_Pilot.api.Interfaces;
-using Legal_Pilot.api.Services;
+using Compliance_Hub.api.Interfaces;
+using Compliance_Hub.api.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
