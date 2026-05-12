@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 
-namespace Legal_Pilot.api.Interfaces
+namespace Compliance_Hub.api.Interfaces
 {
     public interface IAuditService
     {

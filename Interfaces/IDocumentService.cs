@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Legal_Pilot.api.DTOs;
+using Compliance_Hub.api.DTOs;
 
-namespace Legal_Pilot.api.Interfaces
+namespace Compliance_Hub.api.Interfaces
 {
     public interface IDocumentService
     {

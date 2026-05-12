@@ -1,10 +1,10 @@
 using System;
 using System.Threading.Tasks;
-using Legal_Pilot.api.Data;
-using Legal_Pilot.api.Interfaces;
-using Legal_Pilot.api.Models;
+using Compliance_Hub.api.Data;
+using Compliance_Hub.api.Interfaces;
+using Compliance_Hub.api.Models;
 
-namespace Legal_Pilot.api.Services
+namespace Compliance_Hub.api.Services
 {
     public class AuditService : IAuditService
     {

@@ -1,6 +1,6 @@
-using Legal_Pilot.api.Models;
+using Compliance_Hub.api.Models;
 
-namespace Legal_Pilot.api.Interfaces
+namespace Compliance_Hub.api.Interfaces
 {
     public interface IJwtService
     {

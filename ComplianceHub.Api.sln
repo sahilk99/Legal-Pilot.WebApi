@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Legal-Pilot.api", "Legal-Pilot.api.csproj", "{536EE4B5-E8D5-49CF-BC17-64AEE5F2E793}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComplianceHub.Api", "ComplianceHub.Api.csproj", "{536EE4B5-E8D5-49CF-BC17-64AEE5F2E793}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

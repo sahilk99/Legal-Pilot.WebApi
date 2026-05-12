@@ -1,12 +1,12 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Legal_Pilot.api.DTOs;
-using Legal_Pilot.api.Interfaces;
+using Compliance_Hub.api.DTOs;
+using Compliance_Hub.api.Interfaces;
 using System;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
-namespace Legal_Pilot.api.Controllers
+namespace Compliance_Hub.api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
